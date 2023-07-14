@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import ChapterMenu from '@components/ChapterMenu'
 import logoWebtinix from '@public/webtinix-logo.png'
+import logoWXacademy from '@public/wx-academy-logo.png'
 
 export const metadata = {
     title: 'Cours Webtinix Academy',
@@ -36,9 +37,9 @@ const layout = ({ children }) => {
                     {children}
                 </section>
                 <aside className="col-span-1 overflow-hidden flex flex-col gap-4">
-                    <div className="w-full grid grid-cols-2 gap-2 relative p-2 rounded-lg bg-[#191919]">
-                        <Image src={logoWebtinix} className="object-cover bg-gray-200 p-3 rounded-lg" alt="logo Webtinix" />
-                        <Image src={logoWebtinix} className="object-cover bg-gray-200 p-3 rounded-lg" alt="logo Webtinix" />
+                    <div className="w-full grid grid-cols-2 gap-2 relative p-2 rounded-lg bg-gray-300">
+                        <Image src={logoWebtinix} className="object-contain object-center h-full p-3 rounded-lg" alt="logo Webtinix" />
+                        <Image src={logoWXacademy} className="object-contain object-center h-full p-3 rounded-lg" alt="logo Webtinix" />
                     </div>
                     <div className="bg-[#191919] rounded-lg flex flex-col items-center py-8 px-6">
                         <div className="h-36 w-36 rounded-full bg-white"></div>
