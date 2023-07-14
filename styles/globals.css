@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2 {
+    @apply text-4xl text-white my-7; 
+}
+
+h3 {
+    @apply text-2xl text-white my-7;
+}
+
+p {
+    @apply my-4;
+}
+
+.learn-h {
+    height: calc(100vh - 15px);
+}
+
+.hidden-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.activeLi {
+    @apply border-8 border-t-0 border-b-0 border-[#303136] w-full p-6 cursor-pointer bg-[#FF5100] text-white
+}
+.inActiveLi {
+    @apply border-8 border-transparent border-t-0 border-b-0 hover:border-[#303136] transition-colors duration-500 w-full p-6 cursor-pointer 
+}
+.inActiveLink {
+    @apply transform transition-transform duration-500 group-hover:translate-x-2
+}
+.activeLink {
+    @apply transform translate-x-2 flex justify-between items-center
+}
+
+/* Custom style for editor */
+pre:not(.inline) {
+    background-color: #303136!important;
+    border: 1px solid rgb(209 213 219 / 0.25);
+    padding: 1.5rem!important;
+    margin: 0!important;
+}
+pre span {
+    text-shadow: none!important;
+}
+
+/* HTML language */
+pre .language-html span.token {
+    color: #9cc598!important;
+}
+pre .language-html span {
+    color: rgb(209 213 219 / 0.50)!important;
+}
+
+/* CSS */
+pre .language-css span.token.color {
+    color: #01bb8c!important;
+}
+/* #e3609d */
