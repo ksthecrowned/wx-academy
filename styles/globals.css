@@ -66,15 +66,25 @@ pre:not(.inline):not(.block):not(.inline-block) {
     margin: 10px 0!important;
 }
 pre.inline {
-    @apply bg-[#303136] border border-gray-500 py-0.5 px-2 text-[#9cc598]
+    @apply bg-[#303136] border border-gray-500 py-0.5 px-2 text-[#9cc598] 
 }
 pre span {
     text-shadow: none!important;
 }
 
 /* HTML language */
-pre .language-html span.token {
+/* pre .language-html span.token {
     color: #9cc598!important;
+} */
+pre .language-html span.token[style="color: rgb(153, 0, 85);"] {
+    color: #9cc598!important;
+}
+pre .language-html span.token[style="color: rgb(153, 153, 153);"],
+pre .language-html span.token[style="color: rgb(0, 119, 170);"] {
+    color: #4dd3ff!important;
+}
+pre .language-html span.token[style="color: rgb(102, 153, 0);"] {
+    color: #e3609d!important;
 }
 pre .language-html span {
     color: rgb(209 213 219 / 0.50)!important;
@@ -84,4 +94,21 @@ pre .language-html span {
 pre .language-css span.token.color {
     color: #01bb8c!important;
 }
-/* #e3609d */
+
+
+/* JavaScript */
+pre .language-javascript span.token[style="color: rgb(0, 119, 170);"] {
+    color: rgb(23 37 84)!important;
+}
+pre .language-javascript span.token.dom {
+    color: #4dd3ff!important;
+}
+pre .language-javascript span.token.method.property-access {
+    color: #e3609d!important;
+}
+pre .language-javascript span {
+    color: rgb(209 213 219 / 0.50)!important;
+}
+pre .language-javascript span.token[style="color: rgb(154, 110, 58); background: rgba(255, 255, 255, 0.5);"] {
+    background: transparent!important;
+}

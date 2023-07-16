@@ -273,11 +273,11 @@ export const chapter1 = {
 
 export const chapter2 = {
     'id': '2',
-    'param': 'apercu-le-html',
-    'title': 'Aperçu sur le HTML',
+    'param': 'presentation-du-html',
+    'title': 'Présentation du HTML',
     'content': [
         {
-            content: "<h1>Aperçu sur le HTML.</h1>",
+            content: "<h1>Présentation du HTML.</h1>",
             isCode: false,
             language: ""
         },
@@ -1850,13 +1850,238 @@ export const chapter6 = {
         }
     ]    
 }
-export const chapter7 = [
-    {
-        content: "<h1>Les attributs</h1>",
-        isCode: false,
-        language: ""
-    },
-]
+export const chapter7 = {
+    'id': '7',
+    'param': 'les-attributs',
+    'title': 'Les attributs',
+    'content': [
+        {
+            content: "<h1>Les attributs</h1>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Découvrez les différents attributs globaux ainsi que les attributs spécifiques à des éléments HTML particuliers.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Les attributs ont été brièvement abordés dans la section Vue d'ensemble du langage HTML ; il est temps d'approfondir la question.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Les attributs sont ce qui rend le langage HTML si puissant. Les attributs sont des noms séparés par des espaces et des paires nom/valeur apparaissant dans la balise d'ouverture, qui fournissent des informations sur l'élément et ses fonctionnalités.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<img src='https://web-dev.imgix.net/image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/17yQeLEUX6s88IbDJreQ.png?auto=format&w=845'>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Les attributs définissent le comportement, les liens et les fonctionnalités des éléments. Certains attributs sont globaux, c'est-à-dire qu'ils peuvent apparaître dans la balise d'ouverture de n'importe quel élément. D'autres attributs s'appliquent à plusieurs éléments mais pas à tous, tandis que d'autres attributs sont spécifiques à un élément et ne concernent qu'un seul élément. En HTML, tous les attributs, à l'exception des attributs booléens et, dans une certaine mesure, des attributs énumérés, nécessitent une valeur.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Si la valeur d'un attribut comprend un espace ou des caractères spéciaux, elle doit être mise entre guillemets. Pour cette raison, et pour une meilleure lisibilité, il est toujours recommandé d'utiliser des guillemets.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Si le langage HTML n'est pas sensible à la casse, certaines valeurs d'attributs le sont. Les valeurs qui font partie de la spécification HTML ne sont pas sensibles à la casse. Les chaînes de caractères définies, telles que les noms de classe et d'identifiant, sont sensibles à la casse. Si une valeur d'attribut est sensible à la casse en HTML, elle l'est également lorsqu'elle est utilisée dans le cadre d'un sélecteur d'attribut en CSS et en JavaScript ; dans le cas contraire, elle ne l'est pas.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<!-- the type attribute is case insensitive: these are equivalent -->\n<input type=\"text\">\n<input type=\"TeXt\">\n\n<!-- the id attribute is case sensitive: they are not equivalent -->\n<div id=\"myId\">\n<div id=\"MyID\">",
+            isCode: true,
+            language: "html"
+        },
+        {
+            content: "<h2>Les attributs booléens</h2>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Si un attribut booléen est présent, il est toujours considéré comme vrai. Les attributs booléens incluent <pre class='inline'>autofocus</pre>, <pre class='inline'>inert</pre>, <pre class='inline'>checked</pre>, <pre class='inline'>disabled</pre>, <pre class='inline'>required</pre>, <pre class='inline'>reversed</pre>, <pre class='inline'>allowfullscreen</pre>, <pre class='inline'>default</pre>, <pre class='inline'>loop</pre>, <pre class='inline'>autoplay</pre>, <pre class='inline'>controls</pre>, <pre class='inline'>muted</pre>, <pre class='inline'>readonly</pre>, <pre class='inline'>multiple</pre> et <pre class='inline'>selected</pre>. Si l'un (ou plusieurs) de ces attributs est présent, l'élément est désactivé, requis, en lecture seule, etc. S'ils ne sont pas présents, ce n'est pas le cas.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Les valeurs booléennes peuvent être omises, définies comme une chaîne vide ou être le nom de l'attribut lui-même ; mais la valeur n'a pas nécessairement besoin d'être définie comme la chaîne <pre class='inline'>true</pre>. Toutes les valeurs, y compris <pre class='inline'>true</pre>, <pre class='inline'>false</pre> et <pre class='inline'>😀</pre>, bien qu'invalides, seront évaluées comme vraies.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Ces trois balises sont équivalentes :</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<input required>\n<input required=\"\">\n<input required=\"required\">",
+            isCode: true,
+            language: "html"
+        },
+        {
+            content: "<div>Si la valeur de l'attribut est <pre class='inline'>false</pre>, omettez l'attribut. Si l'attribut est <pre class='inline'>true</pre>, incluez l'attribut mais ne fournissez pas de valeur. Par exemple, <pre class='inline'>required=\"required\"</pre> n'est pas une valeur valide en HTML ; mais comme <pre class='inline'>required</pre> est un attribut booléen, les valeurs invalides sont évaluées comme vraies. Mais comme les attributs énumérés invalides ne se résolvent pas nécessairement à la même valeur que les valeurs manquantes, il est plus facile de prendre l'habitude d'omettre les valeurs que de se souvenir des attributs booléens par rapport aux attributs énumérés et potentiellement fournir une valeur invalide.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Pour alterner entre vrai et faux, ajoutez et supprimez l'attribut avec JavaScript plutôt que d'alterner la valeur.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "const myMedia = document.getElementById(\"mediaFile\");\nmyMedia.removeAttribute(\"muted\");\nmyMedia.setAttribute(\"muted\");",
+            isCode: true,
+            language: "javascript"
+        },
+        {
+            content: "<div>Notez que dans les langages XML, comme SVG, tous les attributs doivent inclure une valeur, y compris les attributs booléens.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<h2>Les attributs énumérés</h2>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Les attributs énumérés sont parfois confondus avec les attributs booléens. Ce sont des attributs HTML qui ont un ensemble limité de valeurs valides prédéfinies. Tout comme les attributs booléens, ils ont une valeur par défaut si l'attribut est présent mais que la valeur est manquante. Par exemple, si vous incluez <pre class='inline'><style contenteditable></pre>, cela se résoudra par défaut en <pre class='inline'><style contenteditable=\"true\"></pre>.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div>Contrairement aux attributs booléens, cependant, omettre l'attribut ne signifie pas qu'il est faux ; un attribut présent avec une valeur manquante n'est pas nécessairement vrai ; et la valeur par défaut pour les valeurs invalides n'est pas nécessairement une chaîne vide. Prenons l'exemple de <pre class='inline'><style contenteditable></pre> : si l'attribut est manquant ou invalide, sa valeur par défaut est <pre class='inline'>inherit</pre>, et il peut être explicitement défini sur <pre class='inline'>false</pre>.</div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+        {
+            content: "<div></div>",
+            isCode: false,
+            language: ""
+        },
+    ]
+}
 
 export const chapter8 = [
     {
