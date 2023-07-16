@@ -6,15 +6,31 @@
     @apply leading-[27px]
 }
 
-h1, h2 {
-    @apply text-4xl text-white my-7; 
+h1, h2, h3 {
+    @apply text-white my-7; 
+}
+
+h4, h5, h6 {
+    @apply text-white my-4; 
+}
+
+h1 {
+    @apply text-5xl
+}
+
+h2 {
+    @apply text-4xl
 }
 
 h3 {
-    @apply text-2xl text-white my-7;
+    @apply text-3xl;
 }
 
-p {
+h4 {
+    @apply text-2xl;
+}
+
+p, div:not([class]) {
     @apply my-4;
 }
 
@@ -43,7 +59,7 @@ p {
 }
 
 /* Custom style for editor */
-pre:not(.inline) {
+pre:not(.inline):not(.block):not(.inline-block) {
     background-color: #303136!important;
     border: 1px solid rgb(209 213 219 / 0.25);
     padding: 1.5rem!important;

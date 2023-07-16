@@ -11,19 +11,19 @@ export const metadata = {
 const chapters = [
     {
         title: 'Apprendre le HTML',
-        url: 'apprendre-le-html'
+        url: 'html/apprendre-le-html'
     },
     {
         title: 'Apperçu général',
-        url: 'appercu-general'
+        url: 'html/appercu-general'
     },
     {
         title: 'Structure du document',
-        url: 'structure-du-document'
+        url: 'html/structure-du-document'
     },
     {
         title: 'Les méta données',
-        url: 'les-meta-donnees'
+        url: 'html/les-meta-donnees'
     }
 ]
 
@@ -47,7 +47,7 @@ const layout = ({ children }) => {
                         <p className="my-0">Directeur général à Webtinix</p>
                         <p className="my-0">Developpeur Back-end / Formateur</p>
                     </div>
-                    <div className="bg-[#191919] rounded-lg h-52"></div>
+                    <div className="bg-[#191919] rounded-lg"></div>
                 </aside>
             </div>
         </div>
