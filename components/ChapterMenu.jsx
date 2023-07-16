@@ -4,7 +4,19 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import learnHtml from '@public/learn-html.webp'
 
-const ChapterMenu = ({ chapters }) => {
+import { 
+    chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, 
+    chapter9, chapter10, chapter11, chapter12, chapter13, chapter14, chapter15, 
+    chapter16, chapter17, chapter18, chapter19, chapter20, chapter21, chapter22
+} from '@constants/html-course'
+
+const chapters = [ 
+    chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7,
+    chapter8, chapter9, chapter10, chapter11, chapter12, chapter13, chapter14, 
+    chapter15, chapter16, chapter17, chapter18, chapter19, chapter20, chapter21, chapter22 
+]
+
+const ChapterMenu = () => {
     const pathname = usePathname()
     return (
         <aside className="bg-[#191919] col-span-1 rounded-lg overflow-hidden">
@@ -14,10 +26,10 @@ const ChapterMenu = ({ chapters }) => {
             </div>
             <ul className="font-medium overflow-y-auto h-full hidden-scrollbar relative">
                 {
-                    chapters.map((chapter, index) => {
+                    chapters.map(chapter => {
                         return (
-                            <li key={index} className={('/learn/' + chapter.url) != pathname ? "inActiveLi hover:bg-orange-600/5 group" : "activeLi"}>
-                                <a href={chapter.url}  className={('/learn/' + chapter.url) != pathname ? "inActiveLink" : "activeLink"}>
+                            <li key={chapter.id} className={('/learn/' + chapter.param) != pathname ? "inActiveLi hover:bg-orange-600/5 group" : "activeLi"}>
+                                <a href={chapter.param}  className={('/learn/' + chapter.param) != pathname ? "inActiveLink" : "activeLink"}>
                                     {chapter.title}
                                 </a>
                             </li>
