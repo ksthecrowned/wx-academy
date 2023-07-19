@@ -8,25 +8,27 @@ import Image from 'next/image'
 import { 
     chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, 
     chapter9, chapter10, chapter11, chapter12, chapter13, chapter14, chapter15, 
-    chapter16, chapter17, chapter18, chapter19, chapter20, chapter21, chapter22
+    chapter16, chapter17, chapter18, chapter19, chapter20, chapter21
 } from '@constants/html-course'
 
 const chapters = [ 
     chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7,
     chapter8, chapter9, chapter10, chapter11, chapter12, chapter13, chapter14, 
-    chapter15, chapter16, chapter17, chapter18, chapter19, chapter20, chapter21, chapter22 
+    chapter15, chapter16, chapter17, chapter18, chapter19, chapter20, chapter21 
 ]
   
 const page = ({ params }) => {
     const [chapter, setChapter] = useState(null)
     useEffect(() => {
-        setChapter(chapters.filter(obj => obj.param === params.chapter))
+        setChapter(chapters.filter(obj => obj.param == 'html/' + params.chapter))
     }, [])
+    console.log(chapters)
     return (
         <div className="px-8 h-full overflow-y-auto hidden-scrollbar">
             {
                 chapter && chapter.length > 0 
                 && chapter[0].content.map((item, index) => {
+                    console.log(chapters)
                     if(item.isCode) {
                         return <CodeSnippet key={index} code={item.content} language={item.language} />
                     } else {
