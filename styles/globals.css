@@ -46,10 +46,10 @@ p, div:not([class]) {
     display: none;
 }
 .activeLi {
-    @apply border-8 border-t-0 border-b-0 border-[#303136] w-full p-6 cursor-pointer bg-[#FF5100] text-white
+    @apply border-8 border-t-0 border-b-0 border-[#303136] w-full cursor-pointer bg-[#FF5100] text-white
 }
 .inActiveLi {
-    @apply border-8 border-transparent border-t-0 border-b-0 hover:border-[#303136] transition-colors duration-500 w-full p-6 cursor-pointer 
+    @apply border-8 border-transparent border-t-0 border-b-0 hover:border-[#303136] transition-colors duration-500 w-full cursor-pointer 
 }
 .inActiveLink {
     @apply transform transition-transform duration-500 group-hover:translate-x-2

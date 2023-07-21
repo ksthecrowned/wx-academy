@@ -28,8 +28,8 @@ const ChapterMenu = () => {
                 {
                     chapters.map(chapter => {
                         return (
-                            <li key={chapter.id} className={('/learn/' + chapter.param) != pathname ? "inActiveLi hover:bg-orange-600/5 group" : "activeLi"}>
-                                <a href={chapter.param.replace('html/', '')}  className={('/learn/' + chapter.param) != pathname ? "inActiveLink" : "activeLink"}>
+                            <li key={chapter.id} className={('/learn/' + chapter.param) != pathname ? "inActiveLi hover:bg-orange-600/5 group py-6" : "activeLi"}>
+                                <a href={chapter.param.replace('html/', '')}  className={`p-6 ${('/learn/' + chapter.param) != pathname ? "inActiveLink" : "activeLink"}`}>
                                     {chapter.title}
                                 </a>
                             </li>

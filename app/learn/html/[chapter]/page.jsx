@@ -22,17 +22,16 @@ const page = ({ params }) => {
     useEffect(() => {
         setChapter(chapters.filter(obj => obj.param == 'html/' + params.chapter))
     }, [])
-    console.log(chapters)
     return (
         <div className="px-8 h-full overflow-y-auto hidden-scrollbar">
             {
                 chapter && chapter.length > 0 
-                && chapter[0].content.map((item, index) => {
-                    console.log(chapters)
-                    if(item.isCode) {
-                        return <CodeSnippet key={index} code={item.content} language={item.language} />
+                && chapter[0].content.map((chapter, index) => {
+                    console.log(chapter)
+                    if(chapter.isCode) {
+                        return <CodeSnippet key={index} code={chapter.content} language={chapter.language} />
                     } else {
-                        return <HTMLRenderer key={index} htmlString={item.content} />
+                        return <HTMLRenderer key={index} htmlString={chapter.content} />
                     }
                 })
             }

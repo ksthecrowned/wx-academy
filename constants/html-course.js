@@ -1953,12 +1953,12 @@ export const chapter6 = {
             language: ""
         },
         {
-            content: "<div>Les attributs énumérés sont parfois confondus avec les attributs booléens. Ce sont des attributs HTML qui ont un ensemble limité de valeurs valides prédéfinies. Tout comme les attributs booléens, ils ont une valeur par défaut si l'attribut est présent mais que la valeur est manquante. Par exemple, si vous incluez <pre class='inlinepre'><style contenteditable></pre>, cela se résoudra par défaut en <pre class='inlinepre'><style contenteditable=\"true\"></pre>.</div>",
+            content: "<div>Les attributs énumérés sont parfois confondus avec les attributs booléens. Ce sont des attributs HTML qui ont un ensemble limité de valeurs valides prédéfinies. Tout comme les attributs booléens, ils ont une valeur par défaut si l'attribut est présent mais que la valeur est manquante. Par exemple, si vous incluez <pre class='inlinepre'>&lt;style contenteditable&gt;</pre>, cela se résoudra par défaut en <pre class='inlinepre'>&lt;style contenteditable=\"true\"&gt;</pre>.</div>",
             isCode: false,
             language: ""
         },
         {
-            content: "<div>Contrairement aux attributs booléens, cependant, omettre l'attribut ne signifie pas qu'il est faux ; un attribut présent avec une valeur manquante n'est pas nécessairement vrai ; et la valeur par défaut pour les valeurs invalides n'est pas nécessairement une chaîne vide. Prenons l'exemple de <pre class='inlinepre'><style contenteditable></pre> : si l'attribut est manquant ou invalide, sa valeur par défaut est <pre class='inlinepre'>inherit</pre>, et il peut être explicitement défini sur <pre class='inlinepre'>false</pre>.</div>",
+            content: "<div>Contrairement aux attributs booléens, cependant, omettre l'attribut ne signifie pas qu'il est faux ; un attribut présent avec une valeur manquante n'est pas nécessairement vrai ; et la valeur par défaut pour les valeurs invalides n'est pas nécessairement une chaîne vide. Prenons l'exemple de <pre class='inlinepre'>&lt;style contenteditable&gt;</pre> : si l'attribut est manquant ou invalide, sa valeur par défaut est <pre class='inlinepre'>inherit</pre>, et il peut être explicitement défini sur <pre class='inlinepre'>false</pre>.</div>",
             isCode: false,
             language: ""
         },
@@ -2111,7 +2111,7 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<h2>Les titres, revisités #</h2>",
+            content: "<h2>Les titres, revisités</h2>",
             isCode: false,
             language: ""
         },
@@ -2126,19 +2126,19 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<img src='https://web-dev.imgix.net/image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/ktRJF3DKyFHtfLifJXkn.png?auto=format&w=260'>",
+            content: "<img class='w-full' src='https://web-dev.imgix.net/image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/ktRJF3DKyFHtfLifJXkn.png?auto=format&w=260'>",
             isCode: false,
             language: ""
         },
         {
-            content: "<p>Certaines feuilles de style d'agents utilisateurs incluent les sélecteurs suivants, ou des sélecteurs similaires, pour styliser les éléments <pre class='inlinepre'> &lt;h1&gt;</pre> imbriqués comme s'ils étaient d'un niveau moins important : </p>",
+            content: "<div>Certaines feuilles de style d'agents utilisateurs incluent les sélecteurs suivants, ou des sélecteurs similaires, pour styliser les éléments <pre class='inlinepre'>&lt;h1&gt;</pre> imbriqués comme s'ils étaient d'un niveau moins important : </div>",
             isCode: false,
             language: ""
         },
         {
-            content: "<section id=\"about\"  aria-labelledby=\"about_heading\"><h2 id=\"about_heading\">What you'll learn</h2>",
+            content: "h2, :is(article, aside, nav, section) h1 {}\nh3, :is(article, aside, nav, section) :is(article, aside, nav, section) h1 {}",
             isCode: true,
-            language: "html"
+            language: "css"
         },
          {
             content: "<P>Mais le modèle d'objet d'accessibilité (AOM) indique toujours correctement le niveau de l'élément ; dans ce cas, il s'agit de \"titre, niveau 1\". Notez que le navigateur ne le fait pas pour les autres niveaux d'en-tête. Cela dit, n'utilisez pas de style de navigateur basé sur le niveau de l'en-tête. Même si les navigateurs ne prennent pas en charge les contours, faites comme s'ils les prenaient en charge ; marquez les titres de votre contenu comme s'ils les prenaient en charge. Votre contenu aura ainsi un sens pour les moteurs de recherche, les lecteurs d'écran et les futurs responsables de la maintenance (qui pourraient bien être vous).</P>",
@@ -2151,22 +2151,22 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<p>La section \"À propos\" comporte un titre et quelques paragraphes :</p>",
+            content: "<div>La section <pre class='inlinepre'>#about</pre> comporte un titre et quelques paragraphes :</div>",
             isCode: false,
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/jOKdjQm?height=300&amp;theme-id=light&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen jOKdjQm by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/jOKdjQm>Pen jOKdjQm by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe class='w-full h-96' src='https://codepen.io/web-dot-dev/embed/jOKdjQm?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true' />",
             isCode: false,
             language: ""
         },
         {
-            content: "<p>Cette section n'est pas un point de repère car elle n'a pas de nom accessible. Pour la transformer en région, qui est un rôle de repère, vous pouvez utiliser aria-labelledby pour fournir le nom accessible :</p>",
+            content: "<p>Cette section n'est pas un point de repère car elle n'a pas de nom accessible. Pour la transformer en région, qui est un rôle de repère, vous pouvez utiliser <pre class='inlinepre'>aria-labelledby</pre> pour fournir le nom accessible :</p>",
             isCode: false,
             language: ""
         },
         {
-            content: "<section id=\"about\"  aria-labelledby=\"about_heading\"><h2 id=\"about_heading\">What you'll learn</h2>",
+            content: "<section id=\"about\"  aria-labelledby=\"about_heading\">\n<h2 id=\"about_heading\">What you'll learn</h2>",
             isCode: true,
             language: "html"
         },
@@ -2176,22 +2176,22 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<h3>Citations et citations #</h3>",
+            content: "<h3>Citations et références</h3>",
             isCode: false,
             language: ""
         },
         {
-            content: "<div>Lors du marquage d'un article ou d'un billet de blog, vous pouvez vouloir inclure une citation ou une citation à l'emporte-pièce, avec ou sans citation visible. Il existe des éléments pour ces trois types de citations components: <pre class='inlinepre'>&lt;blockquote&gt;</pre>, <pre class='inlinepre'> &lt;q&gt;</pre>, and <pre class='inlinepre'>&lt;cite&lg;</pre> for a visible citation, or the cite attribute to provide more information for search.</div>",
+            content: "<div>Lors du marquage d'un article ou d'un billet de blog, vous pouvez vouloir inclure une citation ou une citation à l'emporte-pièce, avec ou sans citation visible. Il existe des éléments pour ces trois types de citations components: <pre class='inlinepre'>&lt;blockquote&gt;</pre>, <pre class='inlinepre'> &lt;q&gt;</pre>, et <pre class='inlinepre'>&lt;cite&gt;</pre> pour une citation visible, ou l'attribut <pre class='inlinepre'>cite</pre> pour fournir plus d'informations pour la recherche.</div>",
             isCode: false,
             language: ""
         },
         {
-            content: "<p>La section #feedback contient un en-tête et trois commentaires ; ces commentaires sont des guillemets, dont certains contiennent des citations, suivis d'un paragraphe contenant la citation de la citation. Si l'on omet le troisième commentaire pour gagner de la place, le balisage est le suivant :</p>",
+            content: "<p>La section <pre class='inlinepre'>#feedback</pre> contient un en-tête et trois commentaires ; ces commentaires sont des guillemets, dont certains contiennent des citations, suivis d'un paragraphe contenant la citation de la citation. Si l'on omet le troisième commentaire pour gagner de la place, le balisage est le suivant :</p>",
             isCode: false,
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/eYKxwbV?height=300&amp;theme-id=light&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen eYKxwbV by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/eYKxwbV>Pen eYKxwbV by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/eYKxwbV?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen eYKxwbV by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/eYKxwbV>Pen eYKxwbV by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
@@ -2221,7 +2221,7 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/LYrqKMq?height=300&amp;theme-id=light&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen LYrqKMq by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/LYrqKMq>Pen LYrqKMq by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/LYrqKMq?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen LYrqKMq by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/LYrqKMq>Pen LYrqKMq by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
@@ -2236,7 +2236,7 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/NWzoZob?height=300&amp;theme-id=light&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen NWzoZob by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/NWzoZob>Pen NWzoZob by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/NWzoZob?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen NWzoZob by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/NWzoZob>Pen NWzoZob by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
@@ -2256,7 +2256,7 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/qBKgzgg?height=300&amp;theme-id=light&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen qBKgzgg by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/qBKgzgg>Pen qBKgzgg by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/qBKgzgg?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen qBKgzgg by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/qBKgzgg>Pen qBKgzgg by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
@@ -2281,7 +2281,7 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/jOKdjJw?height=300&amp;theme-id=light&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen jOKdjJw by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/jOKdjJw>Pen jOKdjJw by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/jOKdjJw?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen jOKdjJw by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/jOKdjJw>Pen jOKdjJw by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
@@ -2291,7 +2291,7 @@ export const chapter7 = {
             language: ""
         },
         {
-            content: "<p>Vous avez peut-être remarqué la séquence d'échappement ou \"entité\". Parce que le < est utilisé en HTML, vous devez l'échapper en utilisant soit &lt ; soit un encodage moins facile à retenir &#60 ;. Il existe quatre entités réservées en HTML : <, >, & et \". Leurs références sont respectivement &lt ;, &gt ;, &amp ; et &quot ;.</p>",
+            content: "<div>Vous avez peut-être remarqué la séquence d'échappement ou \"entité\". Parce que le <pre class='inlinepre'>&lt;</pre> est utilisé en HTML, vous devez l'échapper en utilisant soit <pre class='inlinepre'>&lt;</pre> soit un encodage moins facile à retenir <pre class='inlinepre'>&#60;</pre>. Il existe quatre entités réservées en HTML : <, >, & et \". Leurs références sont respectivement &lt ;, &gt ;, &amp ; et &quot ;.</div>",
             isCode: false,
             language: ""
         },
@@ -2627,7 +2627,7 @@ export const chapter9 = {
             'language': "",
         },
         {
-            'content': "<iframe allow='camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;' src='https://codepen.io/web-dot-dev/embed/gOKqqyq?height=300&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true' style='height: 100%; width: 100%; border: 0;' title='Pen gOKqqyq by web-dot-dev on Codepen' loading='lazy'>See the Pen <a href=https://codepen.io/web-dot-dev/embed/gOKqqyq>Pen gOKqqyq by web-dot-dev on Codepen</a></iframe>",
+            'content': "<iframe allow='camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;' src='https://codepen.io/web-dot-dev/embed/gOKqqyq?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true' style='height: 100%; width: 100%; border: 0;' title='Pen gOKqqyq by web-dot-dev on Codepen' loading='lazy'>See the Pen <a href=https://codepen.io/web-dot-dev/embed/gOKqqyq>Pen gOKqqyq by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language': "",
         },
@@ -2647,12 +2647,12 @@ export const chapter9 = {
             'language': "",
         },
         {
-            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/dyKaaEe?height=300&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen dyKaaEe by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/dyKaaEe>Pen dyKaaEe by web-dot-dev on Codepen</a></iframe>",
+            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/dyKaaEe?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen dyKaaEe by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/dyKaaEe>Pen dyKaaEe by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language': "",
         },
         {
-            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/jOKddgP?height=300&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen jOKddgP by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/jOKddgP>Pen jOKddgP by web-dot-dev on Codepen</a></iframe>",
+            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/jOKddgP?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen jOKddgP by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/jOKddgP>Pen jOKddgP by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language': "",
         },
@@ -2667,7 +2667,7 @@ export const chapter9 = {
             'language': "",
         },
         {
-            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/rNKPRrJ?height=300&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen rNKPRrJ by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/rNKPRrJ>Pen rNKPRrJ by web-dot-dev on Codepen</a></iframe>",
+            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/rNKPRrJ?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen rNKPRrJ by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/rNKPRrJ>Pen rNKPRrJ by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language': "",
         },
@@ -2682,7 +2682,7 @@ export const chapter9 = {
             'language': "",
         },
         {
-            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/yLEZwyJ?height=300&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen yLEZwyJ by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/yLEZwyJ>Pen yLEZwyJ by web-dot-dev on Codepen</a></iframe>",
+            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/yLEZwyJ?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen yLEZwyJ by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/yLEZwyJ>Pen yLEZwyJ by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language': "",
         },
@@ -2717,7 +2717,7 @@ export const chapter9 = {
             'language': "",
         },
         {
-            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/WNyPmrv?height=300&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen WNyPmrv by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/WNyPmrv>Pen WNyPmrv by web-dot-dev on Codepen</a></iframe>",
+            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/WNyPmrv?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen WNyPmrv by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/WNyPmrv>Pen WNyPmrv by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language': "",
         },
@@ -2800,7 +2800,7 @@ export const chapter9 = {
             'language': "",
         },
         {
-            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/abKXeNM?height=300&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen abKXeNM by web-dot-dev on Codepen\" loading=\"lazy\" __idm_id__=\"548865\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/abKXeNM>Pen abKXeNM by web-dot-dev on Codepen</a></iframe>",
+            'content': "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/abKXeNM?height=500&amp;theme-id=dark&amp;default-tab=html%2Cresult&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen abKXeNM by web-dot-dev on Codepen\" loading=\"lazy\" __idm_id__=\"548865\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/abKXeNM>Pen abKXeNM by web-dot-dev on Codepen</a></iframe>",
             'language': "",
         },
         {
@@ -2829,7 +2829,7 @@ export const chapter9 = {
 
 export const chapter10 = {
     'id': '10',
-    'param' : 'navigation',
+    'param' : 'html/navigation',
     'title': 'Navigation',
     'content':[
         {
@@ -3860,7 +3860,7 @@ export const chapter14 = {
 
 export const chapter15 = {
     'id': 15,
-    'param' :"modele-fente-et-ombre",
+    'param' :"html/modele-fente-et-ombre",
     'title':"Modèle, fente et ombre",
     'content':[
         {
@@ -3924,7 +3924,7 @@ export const chapter15 = {
         },
 
         {
-            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/vYzBNKR?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen vYzBNKR by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/vYzBNKR>Pen vYzBNKR by web-dot-dev on Codepen</a></iframe>",
+            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/vYzBNKR?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen vYzBNKR by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/vYzBNKR>Pen vYzBNKR by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language':''
         },
@@ -3936,7 +3936,7 @@ export const chapter15 = {
         },
 
         {
-            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/WNgeQGq?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen WNgeQGq by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/WNgeQGq>Pen WNgeQGq by web-dot-dev on Codepen</a></iframe>", /*2) 17-12 */
+            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/WNgeQGq?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen WNgeQGq by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/WNgeQGq>Pen WNgeQGq by web-dot-dev on Codepen</a></iframe>", /*2) 17-12 */
             'isCode': false,
             'language':''
         },
@@ -4014,7 +4014,7 @@ export const chapter15 = {
         },
 
         {
-            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/jOvNbwO?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen jOvNbwO by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/jOvNbwO>Pen jOvNbwO by web-dot-dev on Codepen</a></iframe>",
+            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/jOvNbwO?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen jOvNbwO by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/jOvNbwO>Pen jOvNbwO by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language':''
         },
@@ -4062,7 +4062,7 @@ export const chapter15 = {
         },
 
         {
-            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/poOzjpj?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen poOzjpj by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/poOzjpj>Pen poOzjpj by web-dot-dev on Codepen</a></iframe>",
+            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/poOzjpj?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen poOzjpj by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/poOzjpj>Pen poOzjpj by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language':''
         },
@@ -4122,7 +4122,7 @@ export const chapter15 = {
         },
 
         {
-            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/dyqbYme?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen dyqbYme by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/dyqbYme>Pen dyqbYme by web-dot-dev on Codepen</a></iframe>",
+            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/dyqbYme?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen dyqbYme by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/dyqbYme>Pen dyqbYme by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language':''
         },
@@ -4206,7 +4206,7 @@ export const chapter15 = {
         },
 
         {
-            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/abaovjL?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen abaovjL by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/abaovjL>Pen abaovjL by web-dot-dev on Codepen</a></iframe>",
+            'content':"<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/abaovjL?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen abaovjL by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/abaovjL>Pen abaovjL by web-dot-dev on Codepen</a></iframe>",
             'isCode': false,
             'language':''
         },
@@ -4277,7 +4277,7 @@ export const chapter17 = {
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/GRXKqGz?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen GRXKqGz by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/GRXKqGz>Pen GRXKqGz by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/GRXKqGz?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen GRXKqGz by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/GRXKqGz>Pen GRXKqGz by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
@@ -4287,7 +4287,7 @@ export const chapter17 = {
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/KKxPMBV?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen KKxPMBV by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/KKxPMBV>Pen KKxPMBV by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/KKxPMBV?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen KKxPMBV by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/KKxPMBV>Pen KKxPMBV by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
@@ -4372,7 +4372,7 @@ export const chapter17 = {
             language: ""
         },
         {
-            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/WNgexPv?height=500&amp;theme-id=light&amp;default-tab=result&amp;editable=true\" style=\"height: 100%; width: 100%; border: 0;\" title=\"Pen WNgexPv by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/WNgexPv>Pen WNgexPv by web-dot-dev on Codepen</a></iframe>",
+            content: "<iframe allow=\"camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;\" src=\"https://codepen.io/web-dot-dev/embed/WNgexPv?height=500&amp;theme-id=dark&amp;default-tab=result&amp;editable=true\" style=\"height: 500px; width: 100%; border: 0;\" title=\"Pen WNgexPv by web-dot-dev on Codepen\" loading=\"lazy\">See the Pen <a href=https://codepen.io/web-dot-dev/embed/WNgexPv>Pen WNgexPv by web-dot-dev on Codepen</a></iframe>",
             isCode: false,
             language: ""
         },
